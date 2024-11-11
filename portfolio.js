@@ -105,6 +105,7 @@ document.querySelectorAll('.work-block').forEach(block => {
     'Younes-Education-WebSite': ['y1.png', 'y2.png', 'y3.png', 'y4.jpg', 'y5.jpg'],
     'Users Manager Systeme': ['s1.png', 's2.png', 's3.png', 's4.jpg', 's5.jpg', 's6.jpg'],
     'Java Web Service MS': ['j1.png', 'j2.png', 'j3.png', 'j4.png', 'j5.png', 'j6.png'],
+    'task_managment(Under Dev)': ['t1.jpg', 't3.jpg', 't4.jpg'],
     'old portfolio': ['d1.png', 'd2.PNG', 'd3.PNG']
 };
 
