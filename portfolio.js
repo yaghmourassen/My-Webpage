@@ -103,7 +103,7 @@ document.querySelectorAll('.work-block').forEach(block => {
    const imagesMap = {
     'Q&A Website': ['1.PNG', '2.PNG', '3.PNG', '5.jpg', '6.jpg'],
     'Younes-Education-WebSite': ['y1.png', 'y2.png', 'y3.png', 'y4.jpg', 'y5.jpg'],
-    'employee tracker': ['s1.png', 's2.png', 's3.png', 's4.png', 's5.png', 's6.png'],
+    'Employee Tracker': ['s1.png', 's2.png', 's3.png', 's4.png', 's5.png', 's6.png'],
     'Java Web Service MS': ['j1.png', 'j2.png', 'j3.png', 'j4.png', 'j5.png', 'j6.png'],
     'Schedulded_task': ['st2.jpg', 'st3.jpg', 'st4.jpg', 'st5.jpg', 'st6.jpg', 'st7.jpg'],
     'old portfolio': ['d1.png', 'd2.PNG', 'd3.PNG']
