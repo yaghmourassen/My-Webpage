@@ -1,114 +1,119 @@
-/* Container for the skills section */
+/* ----------------------------
+   Container for the skills section
+----------------------------- */
 .skills-section {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 40px auto;
 }
 
-/* Flex container to arrange skills in a flow layout */
-.skill-container {
+/* ----------------------------
+   Title section
+----------------------------- */
+.title-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.title-container .title-text {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.title-container .title-image {
+    max-width: 280px;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ----------------------------
+   Skill container (grid layout)
+----------------------------- */
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 15px;
     justify-content: center;
 }
 
-.title-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-    margin: 0 auto; /* Center the container itself */
-}
-
-.title-image {
-    max-width: 280px; /* Limit the width */
-    width: 100%; /* Ensure it fits within the container */
-    height: 180px; /* Fixed height */
-    object-fit: cover; /* Ensures the image covers the area */
- 
-    display: block;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-}
-
-
-
-
-/* Style for the skill components */
-/* Style for the skill components */
+/* ----------------------------
+   Individual skill block
+----------------------------- */
 .skill {
     display: flex;
     align-items: center;
-    max-width: 400px; /* Fixed width for each skill block */
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     background-color: #fff;
     position: relative;
+    transition: transform 0.3s ease;
 }
 
-
-/* Grid container for skill items */
-.skill-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust to fit 3 items per row */
-    gap: 15px;
-    justify-content: center;
+.skill:hover {
+    transform: translateY(-5px);
 }
-
-/* Skill bar container */
-.skill-bar {
-    background-color: #f3f3f3;
-    border-radius: 5px;
-    height: 12px;
-    width: 100%; /* Fixed width relative to the skill block */
-    position: relative;
-    overflow: hidden;
-}
-
-/* Skill progress bar */
-.skill-progress {
-    height: 100%;
-    background-color: #007bff;
-    border-radius: 5px;
-    width: 0; /* Start with 0 width */
-    position: absolute;
-    top: 0;
-    left: 0;
-    text-align: center;
-    line-height: 12px;
-    color: #fff;
-    font-size: 0.75rem;
-    font-weight: bold;
-}
-
 
 /* Skill logo styling */
 .skill-logo {
     width: 40px;
     height: 40px;
     margin-right: 15px;
+    object-fit: contain;
 }
-
-/* Skill bar container */
-
 
 /* Skill name styling */
 .skill-name {
-    margin-left: 15px;
     font-weight: bold;
 }
 
-/* Responsive adjustments */
+/* ----------------------------
+   Skill bar container
+----------------------------- */
+.skill-bar {
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    height: 12px;
+    width: 100%;
+    overflow: hidden;
+    margin-left: 15px;
+    flex-grow: 1;
+    position: relative;
+}
+
+/* Skill progress */
+.skill-progress {
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 5px;
+    width: 0; /* بداية الشريط */
+    transition: width 1s ease-in-out; /* حركة تدريجية */
+}
+
+/* ----------------------------
+   Responsive adjustments
+----------------------------- */
 @media (max-width: 768px) {
+    .skill-container {
+        grid-template-columns: 1fr; /* عمود واحد على الموبايل */
+    }
+
     .skill {
-        max-width: 100%; /* Ensure skills take full width on smaller screens */
+        justify-content: flex-start;
     }
 }
 
-/* Dark mode adjustments */
+/* ----------------------------
+   Dark mode support
+----------------------------- */
 body.dark-mode .skill {
     background-color: #333;
     border-color: #444;
